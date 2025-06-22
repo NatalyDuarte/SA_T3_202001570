@@ -39,7 +39,7 @@ CREATE TABLE ci_relations (
     id INT AUTO_INCREMENT PRIMARY KEY,
     source_ci_id INT NOT NULL,
     target_ci_id INT NOT NULL,
-    tipo_relacion VARCHAR(50) DEFAULT 'dependencia', -- o padre/hijo
+    tipo_relacion VARCHAR(50) DEFAULT 'dependencia', 
 
     FOREIGN KEY (source_ci_id) REFERENCES configuration_items(id) ON DELETE CASCADE,
     FOREIGN KEY (target_ci_id) REFERENCES configuration_items(id) ON DELETE CASCADE
